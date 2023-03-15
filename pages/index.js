@@ -1,8 +1,14 @@
 import Head from "next/head";
+import { SliceZone } from "@prismicio/react";
 
-export default function Home() {
+import { createClient } from "../prismicio";
+import { components } from "../slices";
+
+import Layout from "@/components/Layout";
+
+export default function Home({ page }) {
   return (
-    <>
+    <Layout>
       <Head>
         <title>GreenGenie</title>
         <meta name="description" content="GreenGenie's Website" />
@@ -10,32 +16,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="bg-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="md:flex md:items-center md:justify-between">
-            <div className="md:w-1/2">
-              <p className="text-7xl font-bold leading-tighter mb-4 text-green-600 ">
-                Offset Your Carbon Footprint
-              </p>
-              <p className="text-lg mb-8 text-gray-700">
-                GreenGenie is the easy way to reduce your carbon footprint and
-                help fight climate change. Our app makes it simple and
-                affordable to offset your carbon emissions from daily activities
-                like driving, flying, and using electricity.
-              </p>
-              <a
-                href="#"
-                className="bg-green-500 inline-block mb-6 text-white font-medium py-2 px-4 rounded hover:bg-green-600 hover:text-white transition-colors duration-300"
-              >
-                Sign Up
-              </a>
-            </div>
-            <div className="md:w-1/2">
-              <img src="/wind-turbine.png" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+      <SliceZone slices={page.data.slices} components={components} />
+    </Layout>
   );
+}
+
+export async function getStaticProps({ previewData }) {
+  const client = createClient({ previewData });
+
+  const page = await client.getSingle("homepage");
+
+  return {
+    props: {
+      page,
+    },
+  };
 }

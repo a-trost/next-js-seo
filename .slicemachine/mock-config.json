@@ -1,0 +1,19 @@
+{
+  "_cts": {
+    "page": {},
+    "settings": {},
+    "homepage": {}
+  },
+  "slices": {
+    "Hero": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "BigText": {
+      "default": {
+        "primary": {}
+      }
+    }
+  }
+}

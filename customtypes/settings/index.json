@@ -1,0 +1,17 @@
+{
+  "id": "settings",
+  "label": "Settings",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "website_name": {
+        "type": "Text",
+        "config": {
+          "label": "Website Name",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

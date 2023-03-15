@@ -1,0 +1,55 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "heading": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Offset Your Carbon Footprint"
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "GreenGenie is the easy way to reduce your carbon footprint and help fight climate change. Our app makes it simple and affordable to offset your carbon emissions from daily activities like driving, flying, and using electricity.",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "image": {
+        "origin": {
+          "id": "tTv6Lo5uQVQ",
+          "url": "https://images.unsplash.com/photo-1587168173357-99c7e95fb5cd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyfHx3aW5kbWlsbHxlbnwwfHx8fDE2Nzg0ODg1NTY&ixlib=rb-4.0.3&q=80",
+          "width": 3453,
+          "height": 2587
+        },
+        "url": "https://images.unsplash.com/photo-1587168173357-99c7e95fb5cd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyfHx3aW5kbWlsbHxlbnwwfHx8fDE2Nzg0ODg1NTY&ixlib=rb-4.0.3&q=80",
+        "width": 3453,
+        "height": 2587,
+        "edit": {
+          "background": "transparent",
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "credits": null,
+        "alt": "Windmills",
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]
