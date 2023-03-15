@@ -20,9 +20,9 @@
     "@prismicio/react": "^2.5.2",
     "@prismicio/slice-simulator-react": "^0.2.3",
     "concurrently": "^7.6.0",
-    "eslint": "8.35.0",
-    "eslint-config-next": "13.1.6",
-    "next": "13.1.6",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "next": "13.2.4",
     "prismic-ts-codegen": "^0.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
