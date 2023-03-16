@@ -1,7 +1,35 @@
 {
   "website_name": {
     "__TYPE__": "FieldContent",
-    "value": "image",
+    "value": "triangle",
     "type": "Text"
+  },
+  "navigation": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "label",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "wheat",
+              "type": "Text"
+            }
+          ],
+          [
+            "page",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://google.com"
+              }
+            }
+          ]
+        ]
+      }
+    ]
   }
 }

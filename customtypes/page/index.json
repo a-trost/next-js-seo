@@ -19,6 +19,12 @@
           "choices": {
             "hero": {
               "type": "SharedSlice"
+            },
+            "big_text": {
+              "type": "SharedSlice"
+            },
+            "rich_text": {
+              "type": "SharedSlice"
             }
           }
         }

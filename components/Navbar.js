@@ -1,39 +1,28 @@
-export default function Header() {
+import Link from "next/link";
+import * as prismicH from "@prismicio/helpers";
+
+export default function Header({ settings }) {
   return (
-    <header className="bg-green-500 py-4">
+    <header className="bg-green-700 py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <a href="#" className="text-white font-bold text-2xl">
-              GreenGenie
-            </a>
+            <Link href="/" className="text-white font-bold text-2xl">
+              {settings.data.website_name}
+            </Link>
           </div>
           <div className="hidden md:block">
             <nav className="ml-10 flex items-baseline space-x-4">
-              <a
-                href="#"
-                className="text-white hover:text-green-100 font-medium text-lg"
-              >
-                Home
-              </a>
-              <a
-                href="#"
-                className="text-white hover:text-green-100 font-medium text-lg"
-              >
-                About
-              </a>
-              <a
-                href="#"
-                className="text-white hover:text-green-100 font-medium text-lg"
-              >
-                Services
-              </a>
-              <a
-                href="#"
-                className="text-white hover:text-green-100 font-medium text-lg"
-              >
-                Contact Us
-              </a>
+              {/* map through the pages */}
+              {settings.data.navigation.map(({ label, page }) => (
+                <Link
+                  href={prismicH.asLink(page)}
+                  key={label}
+                  className="text-white hover:text-green-100 font-medium text-lg"
+                >
+                  {label}
+                </Link>
+              ))}
             </nav>
           </div>
         </div>

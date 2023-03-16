@@ -1,14 +1,16 @@
+import { SliceZone } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 
 import { createClient } from "../prismicio";
-import Head from "next/head";
+import { components } from "../slices";
 
-export default function Page() {
+import Layout from "@/components/Layout";
+
+export default function Page({ page, settings }) {
   return (
-    <>
-      <Head></Head>
-      <div>Content here</div>
-    </>
+    <Layout metadata={page.data} settings={settings}>
+      <SliceZone slices={page.data.slices} components={components} />
+    </Layout>
   );
 }
 
@@ -17,10 +19,14 @@ export async function getStaticProps({ params, previewData }) {
 
   const page = await client.getByUID("page", params.uid);
 
+  const settings = await client.getSingle("settings");
+
   return {
     props: {
       page,
+      settings,
     },
+    revalidate: 60,
   };
 }
 

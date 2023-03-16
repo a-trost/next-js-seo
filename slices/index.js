@@ -2,13 +2,16 @@
 
 import BigText from './BigText';
 import Hero from './Hero';
+import RichText from './RichText';
 
 export {
 	BigText,
 	Hero,
+	RichText,
 };
 
 export const components = {
 	big_text: BigText,
 	hero: Hero,
+	rich_text: RichText,
 };

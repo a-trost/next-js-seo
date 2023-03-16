@@ -6,10 +6,12 @@ import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }) {
   return (
-    <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
-      <PrismicPreview repositoryName={repositoryName}>
-        <Component {...pageProps} />
-      </PrismicPreview>
-    </PrismicProvider>
+    <>
+      <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
+        <PrismicPreview repositoryName={repositoryName}>
+          <Component {...pageProps} />
+        </PrismicPreview>
+      </PrismicProvider>
+    </>
   );
 }

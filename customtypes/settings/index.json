@@ -11,6 +11,29 @@
           "label": "Website Name",
           "placeholder": ""
         }
+      },
+      "navigation": {
+        "type": "Group",
+        "config": {
+          "label": "Navigation",
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label",
+                "placeholder": ""
+              }
+            },
+            "page": {
+              "type": "Link",
+              "config": {
+                "label": "Page",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
       }
     }
   }

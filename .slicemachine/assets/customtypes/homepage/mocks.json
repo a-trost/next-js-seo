@@ -3,7 +3,7 @@
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "hero$e0adc98a-0376-460b-8596-e0ff70ede1a6",
+        "key": "hero$b91137cf-2f33-4b4c-9f8e-4d3530a49f73",
         "name": "hero",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -11,7 +11,7 @@
           "primary": {
             "heading": {
               "__TYPE__": "FieldContent",
-              "value": "twice",
+              "value": "arm",
               "type": "Text"
             },
             "description": {
@@ -20,7 +20,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Do culpa cillum officia sunt. Veniam sit non magna incididunt eu amet commodo laboris. Nisi voluptate consectetur irure et."
+                    "text": "In aute cillum sunt. Non pariatur sint tempor quis dolore in sint adipisicing cupidatat aliquip minim labore fugiat. Duis ex consequat velit anim dolore elit do ipsum ipsum irure ea irure."
                   }
                 }
               ]
@@ -29,13 +29,13 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
-                "width": 4000,
-                "height": 6000
+                "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+                "width": 3168,
+                "height": 4752
               },
-              "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
-              "width": 4000,
-              "height": 6000,
+              "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+              "width": 3168,
+              "height": 4752,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -56,7 +56,7 @@
         }
       },
       {
-        "key": "big_text$eb5036ab-da54-422e-afbd-401608596087",
+        "key": "big_text$150227be-b95e-4473-a488-19d26650cf5b",
         "name": "big_text",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -64,7 +64,7 @@
           "primary": {
             "heading": {
               "__TYPE__": "FieldContent",
-              "value": "merely",
+              "value": "voice",
               "type": "Text"
             },
             "body": {
@@ -73,7 +73,34 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Exercitation irure id fugiat duis fugiat officia incididunt irure exercitation mollit voluptate commodo sit."
+                    "text": "Nulla mollit irure nostrud ea."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "rich_text$9267452a-a075-4112-a20d-7ba5a1db450d",
+        "name": "rich_text",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "text": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Quis voluptate deserunt laborum ea cupidatat excepteur. Adipisicing pariatur aliquip aute labore. Minim fugiat pariatur dolor voluptate ea."
                   }
                 }
               ]
@@ -91,25 +118,25 @@
   },
   "meta_title": {
     "__TYPE__": "FieldContent",
-    "value": "development",
+    "value": "shells",
     "type": "Text"
   },
   "meta_description": {
     "__TYPE__": "FieldContent",
-    "value": "each",
+    "value": "recent",
     "type": "Text"
   },
   "og_image": {
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
-      "width": 5848,
-      "height": 3899
+      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+      "width": 5616,
+      "height": 3744
     },
-    "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
-    "width": 5848,
-    "height": 3899,
+    "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+    "width": 5616,
+    "height": 3744,
     "edit": {
       "zoom": 1,
       "crop": {

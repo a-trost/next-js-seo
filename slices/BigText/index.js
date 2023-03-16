@@ -7,9 +7,9 @@ import { PrismicRichText } from "@prismicio/react";
  * @param { BigTextProps }
  */
 const BigText = ({ slice }) => (
-  <div className="py-24 px-6 sm:py-32 lg:px-8">
+  <section className="py-24 px-6 sm:py-32 lg:px-8">
     <div className="mx-auto max-w-2xl text-center">
-      <h2 className="text-4xl font-bold tracking-tight text-green-600 sm:text-6xl">
+      <h2 className="text-4xl font-bold tracking-tight leading-tighter text-green-700 sm:text-6xl">
         {slice.primary.heading}
       </h2>
 
@@ -17,7 +17,7 @@ const BigText = ({ slice }) => (
         <PrismicRichText field={slice.primary.body} />
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export default BigText;

@@ -57,7 +57,7 @@ interface HomepageDocumentData {
  * Slice for *Homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeroSlice | BigTextSlice;
+type HomepageDocumentDataSlicesSlice = HeroSlice | BigTextSlice | RichTextSlice;
 /**
  * Homepage document from Prismic
  *
@@ -119,7 +119,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HeroSlice;
+type PageDocumentDataSlicesSlice = HeroSlice | BigTextSlice | RichTextSlice;
 /**
  * Page document from Prismic
  *
@@ -143,6 +143,43 @@ interface SettingsDocumentData {
      *
      */
     website_name: prismicT.KeyTextField;
+    /**
+     * Navigation field in *Settings*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.navigation[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    navigation: prismicT.GroupField<Simplify<SettingsDocumentDataNavigationItem>>;
+}
+/**
+ * Item in Settings → Navigation
+ *
+ */
+export interface SettingsDocumentDataNavigationItem {
+    /**
+     * Label field in *Settings → Navigation*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.navigation[].label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    label: prismicT.KeyTextField;
+    /**
+     * Page field in *Settings → Navigation*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.navigation[].page
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    page: prismicT.LinkField;
 }
 /**
  * Settings document from Prismic
@@ -263,11 +300,50 @@ type HeroSliceVariation = HeroSliceDefault;
  *
  */
 export type HeroSlice = prismicT.SharedSlice<"hero", HeroSliceVariation>;
+/**
+ * Primary content in RichText → Primary
+ *
+ */
+interface RichTextSliceDefaultPrimary {
+    /**
+     * Text field in *RichText → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: rich_text.primary.text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    text: prismicT.RichTextField;
+}
+/**
+ * Default variation for RichText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `RichText`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type RichTextSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<RichTextSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *RichText*
+ *
+ */
+type RichTextSliceVariation = RichTextSliceDefault;
+/**
+ * RichText Shared Slice
+ *
+ * - **API ID**: `rich_text`
+ * - **Description**: `RichText`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type RichTextSlice = prismicT.SharedSlice<"rich_text", RichTextSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, BigTextSliceDefaultPrimary, BigTextSliceDefault, BigTextSliceVariation, BigTextSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocumentDataNavigationItem, SettingsDocument, AllDocumentTypes, BigTextSliceDefaultPrimary, BigTextSliceDefault, BigTextSliceVariation, BigTextSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice };
     }
 }
