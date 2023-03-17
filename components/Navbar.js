@@ -3,7 +3,7 @@ import * as prismicH from "@prismicio/helpers";
 
 export default function Header({ settings }) {
   return (
-    <header className="bg-green-700 py-4">
+    <div className="bg-green-700 py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -12,7 +12,7 @@ export default function Header({ settings }) {
             </Link>
           </div>
           <div className="hidden md:block">
-            <nav className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-baseline space-x-4">
               {/* map through the pages */}
               {settings.data.navigation.map(({ label, page }) => (
                 <Link
@@ -23,10 +23,10 @@ export default function Header({ settings }) {
                   {label}
                 </Link>
               ))}
-            </nav>
+            </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 }

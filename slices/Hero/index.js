@@ -7,13 +7,13 @@ import { PrismicNextImage } from "@prismicio/next";
  * @param { HeroProps }
  */
 const Hero = ({ slice }) => (
-  <section>
+  <div>
     <div className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="md:flex md:items-center md:justify-between">
         <div className="md:w-1/2">
-          <h1 className="text-5xl sm:text-7xl font-bold leading-tighter mb-4 text-green-700 ">
+          <div className="text-5xl sm:text-7xl font-bold leading-tighter mb-4 text-green-700 ">
             {slice.primary.heading}
-          </h1>
+          </div>
           <div className="text-lg mb-8 text-gray-700">
             <PrismicRichText field={slice.primary.description} />
           </div>
@@ -33,7 +33,7 @@ const Hero = ({ slice }) => (
         </div>
       </div>
     </div>
-  </section>
+  </div>
 );
 
 export default Hero;

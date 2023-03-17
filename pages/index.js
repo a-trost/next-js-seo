@@ -25,6 +25,5 @@ export async function getStaticProps({ previewData }) {
       page,
       settings,
     },
-    revalidate: 60,
   };
 }
