@@ -13,7 +13,6 @@ export default function Header({ settings }) {
           </div>
           <div className="hidden md:block">
             <nav className="ml-10 flex items-baseline space-x-4">
-              {/* map through the pages */}
               {settings.data.navigation.map(({ label, page }) => (
                 <Link
                   href={prismicH.asLink(page)}
